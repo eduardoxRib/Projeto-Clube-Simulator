@@ -1,5 +1,6 @@
 package MyUI;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 public class Index extends javax.swing.JFrame {
 
@@ -242,7 +243,11 @@ public class Index extends javax.swing.JFrame {
         Clube_Jogadores temp = new Clube_Jogadores();
         PainelP.add(temp);
         temp.setVisible(true);
-        temp.
+        String text = "";
+        for (int x = 0; x < banco.Jogadores_Clube.size(); x++) {
+            text += banco.Jogadores_Clube.get(x).nome + " Salário: +"+banco.Jogadores_Clube.get(x).salario  +"\n";
+        }
+        JOptionPane.showMessageDialog(null, " Jogadores do Clube: \n " + text);
     }//GEN-LAST:event_bt_JogadoresActionPerformed
 
     private void bt_FinanceiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_FinanceiroActionPerformed
